@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Portfolio with Image Upload</title>
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="form-container">
+        <div>
+        <h2>Personal Information</h2>
+        </div>
+        <form id="contactForm">
+            <div class="form-group">
+                <label for="image"><i class='bx bx-image'></i>Your Image:</label>
+                <input type="file" id="file" accept="image/*" hidden>
+                <div class="img-area" data-img="">
+                    <i class='bx bxs-cloud-upload icon'></i>
+                    <h3>Upload Image</h3>
+                    <p>Image size must be less than <span>2MB</span></p>
+                </div>
+                <button type="button" id="selectImageButton" class="select-image">Select Image</button>
+            </div>
+            <div class="form-group">
+                <label for="name"><i class='bx bx-user'></i>Full Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="age"><i class='bx bx-calendar'></i>Date Of Birth:</label>
+                <input type="date" id="age" name="age" >
+            </div>
+            <div class="form-group">
+                <label for="email"><i class='bx bx-envelope'></i>Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone"><i class='bx bx-phone'></i>Phone Number:</label>
+                <input type="text" id="phone" name="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="profile"><i class='bx bxl-linkedin'></i>LinkedIn Profile:</label>
+                <input type="text" id="profile" name="profile" required>
+            </div>
+
+
+            <h2>Education</h2>
+            <div class="dropdown-container">
+        <label for="degree"><i class='bx bxs-graduation'></i>Degree:</label>
+        <select id="degree" name="degree" required>
+            <option value="" disabled selected>Select your degree</option>
+            <option value="bachelor">Bachelor's Degree</option>
+            <option value="master">Master's Degree</option>
+            <option value="phd">PhD</option>
+        </select>
+        </div>
+        <br>
+        <div class="form-group">
+            <label for="institution"><i class='bx bxs-school'></i>Institutions Attended:</label>
+        <input type="text" id="institution" name="institution" required><br>
+        </div>
+            <div class="form-group">
+                <label for="message"><i class='bx bx-message'></i>Professional goals:</label>
+                <textarea id="message" name="message" required></textarea>
+            </div>
+
+            <h2>Work Experience</h2>
+        <div class="dropdown-container">
+            <label class="job"><i class="fas fa-briefcase"></i>Job Titles:</label>
+            <select id="job" name="job" >
+            <option value="" disabled selected id="text">Select your job</option>
+            <option value="Software Engineer">Software Engineer</option>
+            <option value="Web Developer">Web Developer</option>
+            <option value="Business Analyst">Business Analyst</option>
+            <option value="Pharmacist">Pharmacist</option>
+            <option value="Professor">Professor </option>
+            <option value="Civil Engineer">Civil Engineer</option>
+        </select>
+        </div>
+        <br>
+        <div class="form-group">
+            <label for="experience"><i class="fas fa-trophy"></i></i>Achievements and Responsibilities:</label>
+            <textarea id="experience" name="experience"></textarea>
+        </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+
+
+    <div class="portfolio-container">
+        <div class="template-header"><a href="template1.html"> Template 1 </a> </div>
+        <div class="portfolio-template" id="template1">
+            
+            <div class="template-content">
+                <p><strong>Image:</strong> <span id="template1image"></span></p>
+                <img id="template1Image" src="" alt="" />
+                <p><strong>Name:</strong> <span id="template1Name"></span></p>
+                <p><strong>Date of Birth:</strong> <span id="template1Age"></span></p>
+                <p><strong>Email:</strong> <span id="template1Email"></span></p>
+                <p><strong>Phone Number:</strong> <span id="template1Number"></span></p>
+                <p><strong>LinkedIn Profile:</strong> <span id="template1Profile"></span></p>
+                <p><strong>Degree:</strong> <span id="template1Degree"></span></p>
+                <p><strong>Institution:</strong> <span id="template1Institution"></span></p>
+                <p><strong>Goals:</strong> <span id="template1Message"></span></p>
+                <p><strong>Job:</strong> <span id="template1Job"></span></p>
+                <p><strong>Experiences:</strong> <span id="template1Experience"></span></p>
+            </div>
+        </div>
+        </div>
+        <br>
+        <div class="portfolio-container">
+        <div class="template-header"><a href="template2.html">Template 2</div></a> 
+        <div class="portfolio-template" id="template2">
+
+            <div class="template-content">
+                <p><strong>Image:</strong> <span id="template2image"></span></p>
+                <img id="template2Image" src="" alt="" />
+                <p><strong>Name:</strong> <span id="template2Name"></span></p>
+                <p><strong>Date of Birth:</strong> <span id="template2Age"></span></p>
+                <p><strong>Email:</strong> <span id="template2Email"></span></p>
+                <p><strong>Phone Number:</strong> <span id="template2Number"></span></p>
+                <p><strong>LinkedIn Profile:</strong> <span id="template2Profile"></span></p>
+                <p><strong>Degree:</strong> <span id="template2Degree"></span></p>
+                <p><strong>Institution:</strong> <span id="template2Institution"></span></p>
+                <p><strong>Goals:</strong> <span id="template2Message"></span></p>
+                <p><strong>Job:</strong> <span id="template2Job"></span></p>
+                <p><strong>Experiences:</strong> <span id="template2Experience"></span></p>
+           </div>
+        </div>
+
+        
+
+    <script src="index.js"> </script>
+</body>
+</html>
